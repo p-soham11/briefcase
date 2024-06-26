@@ -6,7 +6,9 @@ import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import bingeImg from "@/public/binge.png";
 import jsonValidImg from "@/public/jsonValid.png";
-import { link } from "fs";
+import miroImg from "@/public/miro.png";
+import sudokuImg from "@/public/sudoku.jpg";
+import npmPkgImg from "@/public/currency_convert_pkg.png";
 
 export const links = [
     {
@@ -80,6 +82,22 @@ export const experiencesData = [
 
 export const projectsData = [
     {
+        title: "mIRO Board",
+        description:
+            "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
+        tags: ["Next JS", "TypeScript", "Clerk", "Convex", "Tailwind CSS"],
+        imageUrl: miroImg,
+        link: "https://github.com/p-soham11/miro-board",
+    },
+    {
+        title: "JSON Validator",
+        description:
+            "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
+        tags: ["React", "TypeScript", "JSON Schema"],
+        imageUrl: jsonValidImg,
+        link: "https://json-validator-gamma.vercel.app/",
+    },
+    {
         title: "BINGE",
         description:
             "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
@@ -88,20 +106,20 @@ export const projectsData = [
         link: "https://binge-soham-pals-projects.vercel.app/",
     },
     {
-        title: "JSON Validator",
+        title: "Currency Converter NPM Package",
         description:
-            "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-        tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-        imageUrl: jsonValidImg,
-        link: "https://binge-soham-pals-projects.vercel.app/",
+            "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
+        tags: ["React", "JavaScript", "Redux", "RESTful API", "SASS"],
+        imageUrl: npmPkgImg,
+        link: "https://www.npmjs.com/package/currency-converter-pkg",
     },
     {
-        title: "Word Analytics",
+        title: "SUDOKU Solver",
         description:
-            "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-        tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-        imageUrl: bingeImg,
-        link: "https://binge-soham-pals-projects.vercel.app/",
+            "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
+        tags: ["React", "JavaScript", "Redux", "RESTful API", "SASS"],
+        imageUrl: sudokuImg,
+        link: "https://github.com/p-soham11/sudoku",
     },
 ] as const;
 
