@@ -66,7 +66,7 @@ export const experiencesData = [
         title: "Summer Intern | EY",
         location: "Kolkata, India",
         description:
-            "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+            "Used Angular to implement key features for Swastha Ingit, a West Bengal government initiative, optimizing HMIS landing page and upgrading legacy forms for improved user experience.",
         icon: React.createElement(FaReact),
         date: "Feb, 2023 - July, 2023",
     },
@@ -74,7 +74,7 @@ export const experiencesData = [
         title: "Freelance Web Developer",
         location: "Remote",
         description:
-            "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+            "Developed websites for clients, ensuring high performance and responsiveness, helping them to establish an online presence achieve their business goals",
         icon: React.createElement(CgWorkAlt),
         date: "Nov, 2023 - present",
     },
