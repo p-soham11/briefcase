@@ -84,8 +84,15 @@ export const projectsData = [
     {
         title: "mIRO Board",
         description:
-            "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-        tags: ["Next JS", "TypeScript", "Clerk", "Convex", "Tailwind CSS"],
+            "This is a collaborative whiteboard app using Next.JS with Clerk for authentication, and integrating Liveblocks for real-time collaboration.",
+        tags: [
+            "Next JS",
+            "TypeScript",
+            "Clerk",
+            "Convex",
+            "Auth",
+            "Tailwind CSS",
+        ],
         imageUrl: miroImg,
         link: "https://github.com/p-soham11/miro-board",
     },
@@ -109,7 +116,7 @@ export const projectsData = [
         title: "Currency Converter NPM Package",
         description:
             "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-        tags: ["React", "JavaScript", "Redux", "RESTful API", "SASS"],
+        tags: ["JavaScript", "NPM", "Node.JS"],
         imageUrl: npmPkgImg,
         link: "https://www.npmjs.com/package/currency-converter-pkg",
     },
@@ -117,7 +124,7 @@ export const projectsData = [
         title: "SUDOKU Solver",
         description:
             "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-        tags: ["React", "JavaScript", "Redux", "RESTful API", "SASS"],
+        tags: ["APIs", "JavaScript", "HTML5", "Cascading Style Sheets"],
         imageUrl: sudokuImg,
         link: "https://github.com/p-soham11/sudoku",
     },
