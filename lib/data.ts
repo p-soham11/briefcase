@@ -99,15 +99,15 @@ export const projectsData = [
     {
         title: "JSON Validator",
         description:
-            "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-        tags: ["React", "TypeScript", "JSON Schema"],
+            "This is a JSON validator app which validates JSON response against an user given JSON schema.",
+        tags: ["React", "TypeScript", "JSON Schema", "CSS"],
         imageUrl: jsonValidImg,
         link: "https://json-validator-gamma.vercel.app/",
     },
     {
         title: "BINGE",
         description:
-            "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
+            "This is a movie search app using TMDB API. Users can search for movies and TV shows, view details, casts, trailer and explore similar genre.",
         tags: ["React", "JavaScript", "Redux", "RESTful API", "SASS"],
         imageUrl: bingeImg,
         link: "https://binge-soham-pals-projects.vercel.app/",
@@ -115,7 +115,7 @@ export const projectsData = [
     {
         title: "Currency Converter NPM Package",
         description:
-            "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
+            "This is a simple NPM package to convert currency from one to another. It uses exchange rates from FreeCurrencyAPI.",
         tags: ["JavaScript", "NPM", "Node.JS"],
         imageUrl: npmPkgImg,
         link: "https://www.npmjs.com/package/currency-converter-pkg",
@@ -123,7 +123,7 @@ export const projectsData = [
     {
         title: "SUDOKU Solver",
         description:
-            "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
+            "This is a simple sudoku solver app using backtracking algorithm. Users can random sudoku puzzle and get the solution.",
         tags: ["APIs", "JavaScript", "HTML5", "Cascading Style Sheets"],
         imageUrl: sudokuImg,
         link: "https://github.com/p-soham11/sudoku",
