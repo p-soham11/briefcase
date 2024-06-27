@@ -68,8 +68,7 @@ export default function Intro() {
                 <span className="font-bold">full-stack developer </span> with{" "}
                 <span className="font-bold">
                     <span className="italic">
-                        1 year <br />
-                        of internship experience
+                        1 year of internship experience
                     </span>
                 </span>
                 , passionate about creating engaging{" "}

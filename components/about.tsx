@@ -20,7 +20,7 @@ export default function About() {
             id="about"
         >
             <SectionHeading>
-                Soham's Syntax: Beyond the Screen 🧑‍💻
+                Soham's Syntax: Beyond the Screen 💭
             </SectionHeading>
 
             <p>
