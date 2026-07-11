@@ -3,74 +3,59 @@
 "use client";
 
 import React from "react";
-import SectionHeading from "./section-heading";
-import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
-import { sendEmail } from "@/actions/sendEmail";
-import SubmitBtn from "./submit-btn";
-import toast from "react-hot-toast";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function Contact() {
     const { ref } = useSectionInView("Contact");
+    const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
     return (
-        <motion.section
-            id="contact"
-            ref={ref}
-            className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
-            initial={{
-                opacity: 0,
-            }}
-            whileInView={{
-                opacity: 1,
-            }}
-            transition={{
-                duration: 1,
-            }}
-            viewport={{
-                once: true,
-            }}
-        >
-            <SectionHeading>Contact Me!</SectionHeading>
-
-            <p className="text-gray-700 -mt-6 dark:text-white/80">
-                Please contact me directly at{" "}
-                <a className="underline" href="mailto:sohampal1108@gmail.com">
-                    sohampal1108@gmail.com
-                </a>{" "}
-                or through this form.
+        <section id="contact" ref={ref}>
+            <span className="kicker">{"// contact"}</span>
+            <div className="contact-head">
+                Let&apos;s build
+                <br />
+                something.{" "}
+                <a
+                    href="mailto:p.soham@icloud.com"
+                    onClick={() => {
+                        setActiveSection("Contact");
+                        setTimeOfLastClick(Date.now());
+                    }}
+                >
+                    Say&nbsp;hello&nbsp;↗
+                </a>
+            </div>
+            <p className="contact-sub">
+                I&apos;m happily building at Rolls-Royce, but always open to
+                interesting opportunities and conversations. The fastest way to
+                reach me is email.
             </p>
-
-            <form
-                className="mt-10 flex flex-col dark:text-black"
-                action={async (formData) => {
-                    const { data, error } = await sendEmail(formData);
-
-                    if (error) {
-                        toast.error(error);
-                        return;
-                    }
-
-                    toast.success("Email sent successfully!");
-                }}
-            >
-                <input
-                    className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
-                    name="senderEmail"
-                    type="email"
-                    required
-                    maxLength={500}
-                    placeholder="Your email"
-                />
-                <textarea
-                    className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
-                    name="message"
-                    placeholder="Your message"
-                    required
-                    maxLength={5000}
-                />
-                <SubmitBtn />
-            </form>
-        </motion.section>
+            <div className="links">
+                <a href="mailto:p.soham@icloud.com">
+                    <span className="g">@</span>p.soham@icloud.com
+                </a>
+                <a
+                    href="https://www.linkedin.com/in/palsoham/"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <span className="g">in</span>/palsoham
+                </a>
+                <a
+                    href="https://github.com/p-soham11"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <span className="g">gh</span>/p-soham11
+                </a>
+            </div>
+            <div className="colophon">
+                designed &amp; built by soham pal — 2026
+                <br />
+                bricolage grotesque · instrument sans · jetbrains mono
+            </div>
+        </section>
     );
 }
