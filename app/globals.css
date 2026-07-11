@@ -17,9 +17,9 @@
   --glass: rgba(255, 255, 255, 0.45);
   --bar-bg: rgba(241, 242, 244, 0.9);
   --grid-opacity: 0.28;
-  --display: var(--font-bricolage), -apple-system, sans-serif;
-  --body: var(--font-instrument), -apple-system, sans-serif;
-  --mono: var(--font-jetbrains), ui-monospace, monospace;
+  --display: "Bricolage Grotesque", -apple-system, sans-serif;
+  --body: "Instrument Sans", -apple-system, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
 }
 
 html[data-theme="dark"] {

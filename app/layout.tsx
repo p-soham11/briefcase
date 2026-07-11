@@ -1,32 +1,10 @@
 /** @format */
 
 import "./globals.css";
-import { Bricolage_Grotesque, Instrument_Sans, JetBrains_Mono } from "next/font/google";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import ThemeContextProvider from "@/context/theme-context";
 import Rail from "@/components/rail";
 import Topbar from "@/components/topbar";
-
-const bricolage = Bricolage_Grotesque({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-bricolage",
-  weight: ["400", "600", "700", "800"],
-});
-
-const instrument = Instrument_Sans({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-instrument",
-  weight: ["400", "500", "600"],
-});
-
-const jetbrains = JetBrains_Mono({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-jetbrains",
-  weight: ["400", "500", "600"],
-});
 
 export const metadata = {
   title: "Soham Pal — Full-stack developer",
@@ -38,8 +16,7 @@ const themeInitScript = `
 (function(){
   try{
     var stored=localStorage.getItem('theme');
-    var prefersDark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;
-    document.documentElement.setAttribute('data-theme', stored||(prefersDark?'dark':'light'));
+    document.documentElement.setAttribute('data-theme', stored||'light');
   }catch(e){
     document.documentElement.setAttribute('data-theme','light');
   }
@@ -52,12 +29,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="en"
-      className={`!scroll-smooth ${bricolage.variable} ${instrument.variable} ${jetbrains.variable}`}
-    >
+    <html lang="en" className="!scroll-smooth">
       <head>
         <link rel="icon" href="/icon.png" sizes="any" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+          rel="stylesheet"
+        />
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
       <body>
