@@ -1,154 +1,144 @@
 /** @format */
 
-import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
-import bingeImg from "@/public/binge.png";
-import jsonValidImg from "@/public/jsonValid.png";
-import miroImg from "@/public/miro.png";
-import sudokuImg from "@/public/sudoku.jpg";
-import npmPkgImg from "@/public/currency_convert_pkg.png";
-
 export const links = [
-    {
-        name: "Home",
-        hash: "#home",
-    },
-    {
-        name: "About",
-        hash: "#about",
-    },
-    {
-        name: "Projects",
-        hash: "#projects",
-    },
-    {
-        name: "Skills",
-        hash: "#skills",
-    },
-    {
-        name: "Experience",
-        hash: "#experience",
-    },
-    {
-        name: "Contact",
-        hash: "#contact",
-    },
+  { name: "Home", label: "home", hash: "#home" },
+  { name: "About", label: "about", hash: "#about" },
+  { name: "Projects", label: "projects", hash: "#projects" },
+  { name: "Stack", label: "stack", hash: "#skills" },
+  { name: "Experience", label: "experience", hash: "#experience" },
+  { name: "Contact", label: "contact", hash: "#contact" },
+] as const;
+
+export const specData = [
+  { k: "now", v: "Rolls-Royce", strong: true },
+  { k: "role", v: "Software Engineer", strong: false },
+  { k: "focus", v: "Angular · .NET", strong: true },
+  { k: "degree", v: "B.Tech, CSE", strong: false },
+  { k: "cgpa", v: "8.46 / 10", strong: true },
+  { k: "experience", v: "EY · Sprink · Rolls-Royce", strong: false },
+  { k: "stacks", v: "Micro Frontends · Microservices", strong: false },
+  { k: "based", v: "Bengaluru, India", strong: false },
+  { k: "status", v: "open to opportunities", strong: true },
 ] as const;
 
 export const experiencesData = [
-    {
-        title: "Completed Higher Secondary",
-        location: "Kolkata, India",
-        description:
-            "I passed my higher secondary education in science stream with computer science as an elective subject with 79% from CBSE board.",
-        icon: React.createElement(LuGraduationCap),
-        date: "2019",
-    },
-    {
-        title: "Software Developer Intern | Sprink ",
-        location: "Remote",
-        description:
-            "I worked as a full-stack developer for 6 months, focusing on JavaScript, PHP, MySQL, and the LAMP stack. Enhanced the feedback process post-service cancellations, boosting customer satisfaction. Also improved features and functionalities of the Sprink web app, contributing to its success.",
-        icon: React.createElement(CgWorkAlt),
-        date: "Feb, 2022 - Aug, 2022",
-    },
-    {
-        title: "Graduated from College | B.Tech",
-        location: "Narula Institute of Technology, Kolkata",
-        description:
-            "Pursued Bachelor's degree in Computer Science and Engineering with an average of 8.46 CGPA while participating in various hackathons and coding competitions and open-source projects.",
-        icon: React.createElement(LuGraduationCap),
-        date: "2019 - 2023",
-    },
-    {
-        title: "Summer Intern | EY",
-        location: "Kolkata, India",
-        description:
-            "Used Angular to implement key features for Swastha Ingit, a West Bengal government initiative, optimizing HMIS landing page and upgrading legacy forms for improved user experience.",
-        icon: React.createElement(FaReact),
-        date: "Feb, 2023 - July, 2023",
-    },
-    {
-        title: "Freelance Web Developer",
-        location: "Remote",
-        description:
-            "Developed websites for clients, ensuring high performance and responsiveness, helping them to establish an online presence achieve their business goals",
-        icon: React.createElement(CgWorkAlt),
-        date: "Nov, 2023 - present",
-    },
+  {
+    date: "Oct 2024 — present",
+    title: "Software Engineer · Rolls-Royce",
+    place: "Bengaluru, India · On-site / Hybrid",
+    description:
+      "Building enterprise aerospace software — production Micro Frontends in Angular with reactive forms and custom validators, and .NET microservices for high-throughput data pipelines. Heavy focus on performance (server-side pagination, virtual scrolling, lazy loading, tuned SSMS queries) and keeping code quality high in a regulated environment, with unit test coverage raised to 85%.",
+    now: true,
+  },
+  {
+    date: "Nov 2023 — Aug 2024",
+    title: "Freelance Web Developer",
+    place: "Remote",
+    description:
+      "Front-end engineering for Monad — responsive Next.js interfaces and the product's digital presence — and an online store with payment integration for New Readymade Centre.",
+    now: false,
+  },
+  {
+    date: "Feb 2023 — Jul 2023",
+    title: "Summer Intern · Ernst & Young (EY)",
+    place: "Kolkata, India",
+    description:
+      "Built routes, dynamic forms and custom validations in Angular for Swastha Ingit, a West Bengal government HMIS initiative — cutting form-submission errors ~15% and speeding up the landing page. Also worked with Power Apps and ADO.NET microservices.",
+    now: false,
+  },
+  {
+    date: "Feb 2022 — Aug 2022",
+    title: "Software Developer Intern · Kinematic Foodtech",
+    place: "Remote · Sprink",
+    description:
+      "Full-stack work on the Sprink app — rebuilt the post-cancellation feedback and refund flow, shipped a progressive discount system, and added advanced filtering (cuisine, portion size, meal type) to sharpen the user experience.",
+    now: false,
+  },
+  {
+    date: "Jul 2019 — Jun 2023",
+    title: "B.Tech, Computer Science & Engineering",
+    place: "Narula Institute of Technology · 8.46 CGPA",
+    description:
+      "Graduated with an 8.46 CGPA while taking part in hackathons, coding competitions and open-source contributions.",
+    now: false,
+  },
+  {
+    date: "School",
+    title: "Secondary & Higher Secondary",
+    place: "Kolkata, India",
+    description:
+      "ICSE Secondary at St. Stephen's School (91.7%) and CBSE Higher Secondary at Kalyani Public School (79%).",
+    now: false,
+  },
 ] as const;
 
 export const projectsData = [
-    {
-        title: "mIRO Board",
-        description:
-            "This is a collaborative whiteboard app using Next.JS with Clerk for authentication, and integrating Liveblocks for real-time collaboration.",
-        tags: [
-            "Next JS",
-            "TypeScript",
-            "Clerk",
-            "Convex",
-            "Auth",
-            "Tailwind CSS",
-        ],
-        imageUrl: miroImg,
-        link: "https://github.com/p-soham11/miro-board",
-    },
-    {
-        title: "JSON Validator",
-        description:
-            "This is a JSON validator app which validates JSON response against an user given JSON schema.",
-        tags: ["React", "TypeScript", "JSON Schema", "CSS"],
-        imageUrl: jsonValidImg,
-        link: "https://json-validator-gamma.vercel.app/",
-    },
-    {
-        title: "BINGE",
-        description:
-            "This is a movie search app using TMDB API. Users can search for movies and TV shows, view details, casts, trailer and explore similar genre.",
-        tags: ["React", "JavaScript", "Redux", "RESTful API", "SASS"],
-        imageUrl: bingeImg,
-        link: "https://binge-soham-pals-projects.vercel.app/",
-    },
-    {
-        title: "Currency Converter NPM Package",
-        description:
-            "This is a simple NPM package to convert currency from one to another. It uses exchange rates from FreeCurrencyAPI.",
-        tags: ["JavaScript", "NPM", "Node.JS"],
-        imageUrl: npmPkgImg,
-        link: "https://www.npmjs.com/package/currency-converter-pkg",
-    },
-    {
-        title: "SUDOKU Solver",
-        description:
-            "This is a simple sudoku solver app using backtracking algorithm. Users can random sudoku puzzle and get the solution.",
-        tags: ["APIs", "JavaScript", "HTML5", "Cascading Style Sheets"],
-        imageUrl: sudokuImg,
-        link: "https://github.com/p-soham11/sudoku",
-    },
+  {
+    title: "mIRO Board",
+    description:
+      "A collaborative whiteboard app with real-time multiplayer editing — Clerk for auth, Convex for data, and Liveblocks driving live cursors and presence.",
+    tags: ["next.js", "typescript", "react-hooks", "convex", "liveblocks", "clerk"],
+    type: "web app",
+    link: "https://github.com/p-soham11/miro-board",
+  },
+  {
+    title: "ProximityBrews",
+    description:
+      "A full-stack app for location-based search, integrating Google Maps APIs and geoJSON. Built on MVC architecture with RESTful APIs for a scalable, responsive experience.",
+    tags: ["react", "node.js", "express", "mongodb", "google-apis", "geojson"],
+    type: "web app",
+    link: "https://github.com/p-soham11",
+  },
+  {
+    title: "BINGE",
+    description:
+      "A movie & TV search app on the TMDB API — lazy loading, robust search, details, cast, trailers and genre-based discovery, with state handled in Redux.",
+    tags: ["react", "redux", "rest-api", "sass"],
+    type: "web app",
+    link: "https://binge-soham-pals-projects.vercel.app/",
+  },
+  {
+    title: "JSON Validator",
+    description:
+      "A developer tool built with React, TypeScript and AJV that validates any JSON response against a custom schema — pinpointing exactly where it breaks.",
+    tags: ["react", "typescript", "json-schema", "ajv"],
+    type: "dev tool",
+    link: "https://json-validator-gamma.vercel.app/",
+  },
+  {
+    title: "currency-converter-pkg",
+    description:
+      "A published NPM package that converts between currencies using live exchange rates. Zero-fuss install and use.",
+    tags: ["node.js", "npm", "javascript"],
+    type: "npm package",
+    link: "https://www.npmjs.com/package/currency-converter-pkg",
+  },
 ] as const;
 
-export const skillsData = [
-    "React",
-    "Next JS",
-    "TypeScript",
-    "JavaScript",
-    "Angular",
-    "C++",
-    "MySQL",
-    "Node.JS",
-    "Express",
-    "MongoDB",
-    "Redux",
-    "jQuery",
-    "PHP",
-    "Tailwind CSS",
-    "HTML",
-    "CSS",
-    "Bootstrap",
-    "SASS",
-    "Git",
-    "Linux",
+export const skillLayers = [
+  {
+    idx: "L1",
+    label: "Frontend",
+    chips: ["Angular", "Micro Frontend", "React", "Next.js", "Redux", "Tailwind CSS", "jQuery"],
+  },
+  {
+    idx: "L2",
+    label: "Backend",
+    chips: [".NET", "Microservices", "Node.js", "Express", "RESTful APIs"],
+  },
+  {
+    idx: "L3",
+    label: "Data",
+    chips: ["MySQL", "SSMS"],
+  },
+  {
+    idx: "L4",
+    label: "Languages",
+    chips: ["C++", "TypeScript", "JavaScript"],
+  },
+  {
+    idx: "L5",
+    label: "Tooling",
+    chips: ["Git", "npm", "Linux"],
+  },
 ] as const;
